@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Louis Rajan – AI & Machine Learning student and Software Developer. Portfolio showcasing skills, projects, and contact." />
+  <title>Louis Rajan | AIML Student & Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <span class="bracket">&lt;</span>Louis<span class="dot-accent">.</span>dev<span class="bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about"     class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills"    class="nav-link">Skills</a></li>
+      <li><a href="#projects"  class="nav-link">Projects</a></li>
+      <li><a href="#contact"   class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="badge reveal">👋 &nbsp;Open to opportunities</div>
+      <h1 class="hero-title reveal">
+        Hi, I'm<br><span class="gradient-text">Louis Rajan</span>
+      </h1>
+      <p class="hero-role reveal">
+        <span id="typed-text"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-desc reveal">
+        2nd-year <strong>AI &amp; Machine Learning</strong> student passionate about building intelligent automation tools, software solutions, and web applications — turning ideas into elegant, functional reality.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn btn-primary">
+          View My Work
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="resume.pdf" download class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download Resume
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <div class="stat-num" data-target="6">0</div>
+          <div class="stat-lbl">Languages</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <div class="stat-num" data-target="2">0</div>
+          <div class="stat-lbl">Projects</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <div><span class="stat-num" data-target="100">0</span><span class="stat-pct">%</span></div>
+          <div class="stat-lbl">Passion</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right reveal-right">
+      <div class="code-window glass">
+        <div class="win-bar">
+          <span class="win-dot r"></span>
+          <span class="win-dot y"></span>
+          <span class="win-dot g"></span>
+          <span class="win-title">portfolio.py</span>
+        </div>
+        <pre class="win-code"><span class="ck">class</span> <span class="cc">LouisRajan</span>:
+
+  <span class="ck">def</span> <span class="cf">__init__</span>(self):
+    self.name  = <span class="cs">"Louis Rajan"</span>
+    self.role  = <span class="cs">"Software Developer"</span>
+    self.langs = [
+      <span class="cs">"Python"</span>, <span class="cs">"C++"</span>, <span class="cs">"C"</span>,
+      <span class="cs">"JavaScript"</span>, <span class="cs">"HTML/CSS"</span>
+    ]
+    self.passion = <span class="cn">float</span>(<span class="cs">"inf"</span>) <span class="cm">✨</span>
+
+  <span class="ck">def</span> <span class="cf">greet</span>(self):
+    <span class="ck">return</span> <span class="cs">"Let's build something!"</span></pre>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="sec-head reveal">
+      <span class="sec-tag">01 // About</span>
+      <h2 class="sec-title">Who Am I?</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a 2nd-year <strong>AI &amp; Machine Learning (AIML)</strong> student and software developer who loves turning complex problems into clean, effective solutions. From intelligent bots to beautiful web interfaces, I bring creativity and precision to every project.</p>
+        <p>I'm constantly learning and evolving — always excited to explore new technologies like machine learning, automation, and software development, and apply them to real-world challenges.</p>
+        <div class="chip-row">
+          <span class="chip">🧠 AI / ML</span>
+          <span class="chip">🤖 Automation</span>
+          <span class="chip">🌐 Web Dev</span>
+          <span class="chip">🐍 Python</span>
+          <span class="chip">⚡ Fast Learner</span>
+        </div>
+      </div>
+      <div class="about-card glass reveal-right">
+        <div class="ainfo">
+          <span class="ainfo-icon">📍</span>
+          <div><span class="ainfo-label">Location</span><span class="ainfo-val">India</span></div>
+        </div>
+        <div class="ainfo">
+          <span class="ainfo-icon">💼</span>
+          <div><span class="ainfo-label">Status</span><span class="ainfo-val green-pill">Open to Work</span></div>
+        </div>
+        <div class="ainfo">
+          <span class="ainfo-icon">🎓</span>
+          <div><span class="ainfo-label">Degree</span><span class="ainfo-val">B.E. AIML — 2nd Year</span></div>
+        </div>
+        <div class="ainfo">
+          <span class="ainfo-icon">📧</span>
+          <div><span class="ainfo-label">Email</span><span class="ainfo-val">louisrajan1364@gmail.com</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section id="education">
+    <div class="sec-head reveal">
+      <span class="sec-tag">02 // Education</span>
+      <h2 class="sec-title">Education</h2>
+    </div>
+    <div class="edu-card glass reveal">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <div class="edu-badge">Currently Enrolled</div>
+        <h3 class="edu-degree">B.E. / B.Tech in Artificial Intelligence &amp; Machine Learning</h3>
+        <p class="edu-year">2nd Year · 2023 – 2027 (Expected)</p>
+        <p class="edu-desc">Focusing on foundational algorithms, data structures, machine learning concepts, neural networks, and full-stack software development. Building hands-on projects to apply theoretical knowledge to real-world problems.</p>
+        <div class="edu-tags">
+          <span class="tag-pill">Machine Learning</span>
+          <span class="tag-pill">Data Structures</span>
+          <span class="tag-pill">Neural Networks</span>
+          <span class="tag-pill">Algorithms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="sec-head reveal">
+      <span class="sec-tag">03 // Skills</span>
+      <h2 class="sec-title">Skills &amp; Languages</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card glass reveal" style="--d:0s">
+        <div class="skill-emoji">⚙️</div>
+        <div class="skill-name">C</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+        <div class="skill-lvl">Advanced</div>
+      </div>
+      <div class="skill-card glass reveal" style="--d:.1s">
+        <div class="skill-emoji">🔷</div>
+        <div class="skill-name">C++</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+        <div class="skill-lvl">Advanced</div>
+      </div>
+      <div class="skill-card glass reveal" style="--d:.2s">
+        <div class="skill-emoji">🐍</div>
+        <div class="skill-name">Python</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+        <div class="skill-lvl">Expert</div>
+      </div>
+      <div class="skill-card glass reveal" style="--d:.3s">
+        <div class="skill-emoji">💛</div>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="73"></div></div>
+        <div class="skill-lvl">Proficient</div>
+      </div>
+      <div class="skill-card glass reveal" style="--d:.4s">
+        <div class="skill-emoji">🌐</div>
+        <div class="skill-name">HTML &amp; CSS</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+        <div class="skill-lvl">Advanced</div>
+      </div>
+      <div class="skill-card glass reveal" style="--d:.5s">
+        <div class="skill-emoji">🧠</div>
+        <div class="skill-name">AI &amp; ML</div>
+        <div class="skill-bar"><div class="skill-fill" data-w="65"></div></div>
+        <div class="skill-lvl">Learning</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="sec-head reveal">
+      <span class="sec-tag">04 // Projects</span>
+      <h2 class="sec-title">My Projects</h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="proj-card glass reveal" style="--d:0s">
+        <div class="proj-top-line"></div>
+        <div class="proj-header">
+          <div class="proj-icon">🤖</div>
+          <a href="https://github.com/LouisRajan-V" target="_blank" class="proj-gh-link" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+        <h3 class="proj-title">Telegram Bot</h3>
+        <p class="proj-desc">An automated bot for Telegram that handles commands, processes user requests, and provides interactive responses directly in the chat interface.</p>
+        <div class="proj-tags">
+          <span class="tag-pill">Python</span>
+          <span class="tag-pill">Telegram API</span>
+          <span class="tag-pill">Automation</span>
+        </div>
+      </div>
+
+      <div class="proj-card glass reveal" style="--d:.15s">
+        <div class="proj-top-line"></div>
+        <div class="proj-header">
+          <div class="proj-icon">🌐</div>
+          <a href="https://github.com/LouisRajan-V" target="_blank" class="proj-gh-link" title="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+        <h3 class="proj-title">Web Application</h3>
+        <p class="proj-desc">A custom web interface built with modern frontend tools, delivering a fast, responsive, and visually polished user experience across all devices.</p>
+        <div class="proj-tags">
+          <span class="tag-pill">JavaScript</span>
+          <span class="tag-pill">HTML/CSS</span>
+          <span class="tag-pill">Responsive</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="sec-head reveal">
+      <span class="sec-tag">04 // Contact</span>
+      <h2 class="sec-title">Get In Touch</h2>
+    </div>
+    <p class="contact-sub reveal">Have a project idea or want to collaborate? I'd love to hear from you!</p>
+    <div class="contact-list">
+      <a href="mailto:louisrajan1364@gmail.com" class="ccard glass reveal" style="--d:0s">
+        <span class="ccard-icon">📧</span>
+        <div class="ccard-info">
+          <span class="ccard-type">Email</span>
+          <span class="ccard-val">louisrajan1364@gmail.com</span>
+        </div>
+        <svg class="ccard-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://github.com/LouisRajan-V" target="_blank" class="ccard glass reveal" style="--d:.1s">
+        <span class="ccard-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 013-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </span>
+        <div class="ccard-info">
+          <span class="ccard-type">GitHub</span>
+          <span class="ccard-val">github.com/LouisRajan-V</span>
+        </div>
+        <svg class="ccard-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/louis-rajan-9a539a37b" target="_blank" class="ccard glass reveal" style="--d:.2s">
+        <span class="ccard-icon">💼</span>
+        <div class="ccard-info">
+          <span class="ccard-type">LinkedIn</span>
+          <span class="ccard-val">linkedin.com/in/louis-rajan-9a539a37b</span>
+        </div>
+        <svg class="ccard-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-logo">&lt;Louis.dev/&gt;</span>
+    <p>© 2026 Louis Rajan · Built with ❤️ &amp; ☕</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
