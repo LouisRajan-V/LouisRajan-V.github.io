@@ -432,6 +432,15 @@ section {
 }
 .proj-gh-link:hover { color: var(--cyan); transform: translateY(-2px); }
 
+/* Live/demo link (matches GitHub link styling) */
+.proj-live-link {
+  color: var(--txt3);
+  transition: color .3s, transform .3s;
+  display: flex; align-items: center; margin-left: .6rem;
+}
+.proj-live-link svg { opacity: .9; }
+.proj-live-link:hover { color: var(--cyan); transform: translateY(-2px); }
+
 .proj-title { font-size: 1.25rem; font-weight: 700; margin-bottom: .7rem; }
 .proj-desc  { font-size: .95rem; color: var(--txt2); line-height: 1.75; margin-bottom: 1.4rem; }
 .proj-tags  { display: flex; flex-wrap: wrap; gap: .6rem; }
