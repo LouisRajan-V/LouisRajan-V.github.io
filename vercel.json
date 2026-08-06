@@ -5,4 +5,15 @@
       "src": "index.html",
       "use": "@now/static"
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|webp|ico|json))$",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)$",
+      "dest": "/index.html"
+    }
   ]
+}
