@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Arivuselvan — agriculture undergraduate focused on agroecology, field experience, and digital agriculture.">
+  <meta name="theme-color" content="#f5f4ed">
+  <title>Arivuselvan | Agriculture & Digital Agriculture</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20352c;
+      --muted: #64736a;
+      --green: #2f6848;
+      --green-dark: #234f38;
+      --lime: #d3e2b4;
+      --paper: #f5f4ed;
+      --white: #fffefa;
+      --line: #dce1d6;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.65 var(--sans);
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { font-weight: 750; letter-spacing: -.03em; text-decoration: none; }
+    nav { display: flex; gap: 25px; }
+    nav a {
+      color: var(--muted);
+      font-size: .9rem;
+      text-decoration: none;
+    }
+    nav a:hover, nav a:focus-visible { color: var(--green); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(250px, .8fr);
+      gap: 64px;
+      align-items: center;
+      padding-block: 90px 100px;
+    }
+    .eyebrow {
+      color: var(--green);
+      font-size: .77rem;
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { margin-top: 0; }
+    h1 {
+      max-width: 720px;
+      margin-bottom: 20px;
+      font: 500 clamp(3rem, 8vw, 6.2rem)/.98 var(--serif);
+      letter-spacing: -.055em;
+    }
+    h1 span { color: var(--green); }
+    .lead { max-width: 660px; color: var(--muted); font-size: 1.14rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 10px 18px;
+      border: 1px solid var(--green);
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+      font-size: .92rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .button.secondary { background: transparent; color: var(--green); }
+    .portrait-frame {
+      position: relative;
+      width: min(100%, 340px);
+      justify-self: center;
+      padding: 12px;
+      border: 1px solid #c9d4c3;
+      border-radius: 48% 48% 16px 16px;
+      background: var(--lime);
+    }
+    .portrait-frame img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 48% 48% 10px 10px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+    section { padding-block: 76px; border-top: 1px solid var(--line); }
+    .section-heading {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+    .section-heading .eyebrow { padding-top: 9px; }
+    h2 { margin-bottom: 10px; font: 500 clamp(2rem, 4vw, 3.2rem)/1.08 var(--serif); letter-spacing: -.035em; }
+    .section-intro { max-width: 690px; margin: 0; color: var(--muted); }
+    .education, .experience-card, .project {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+    }
+    .education { padding: 25px 28px; }
+    .education h3, .experience-card h3, .project h3 { margin-bottom: 5px; font-size: 1.05rem; }
+    .meta { margin: 0 0 12px; color: var(--muted); font-size: .9rem; }
+    .education p:last-child, .experience-card p:last-child, .project p:last-child { margin-bottom: 0; }
+    .experience-list { display: grid; gap: 14px; }
+    .experience-card { padding: 22px 26px; }
+    .experience-card ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
+    .experience-card li + li { margin-top: 5px; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .project { padding: 23px; }
+    .project .number { display: block; margin-bottom: 18px; color: var(--green); font-size: .8rem; font-weight: 750; }
+    .project p { color: var(--muted); }
+    .status { display: inline-block; margin-top: 14px; color: var(--green); font-size: .82rem; font-weight: 700; }
+    .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .skill-group { padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+    .skill-group h3 { margin-bottom: 14px; font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 6px 11px; border-radius: 999px; background: #edf1e8; color: #3e5848; font-size: .83rem; }
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding: 34px;
+      border-radius: 18px;
+      background: var(--green-dark);
+      color: white;
+    }
+    .contact h2 { margin-bottom: 6px; }
+    .contact p { margin: 0; color: #e0eadf; }
+    .contact .button { flex: 0 0 auto; border-color: var(--lime); background: var(--lime); color: var(--green-dark); }
+    footer { padding-block: 25px; color: var(--muted); font-size: .83rem; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; gap: 38px; padding-block: 62px 70px; }
+      .portrait-frame { grid-row: 1; width: min(68%, 290px); }
+      .section-heading { grid-template-columns: 1fr; gap: 8px; }
+      .project-grid { grid-template-columns: 1fr; }
+      .contact { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 32px, 1120px); }
+      nav { gap: 13px; }
+      nav a { font-size: .8rem; }
+      .skills-layout { grid-template-columns: 1fr; }
+      section { padding-block: 56px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="#top">Arivuselvan</a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero wrap" id="about">
+      <div>
+        <p class="eyebrow">Agriculture · Agroecology · Digital Agriculture</p>
+        <h1>Rooted in the field.<br><span>Curious about what’s next.</span></h1>
+        <p class="lead">I’m Arivuselvan, an agriculture undergraduate interested in agroecology, farmer-centered digital tools, and making agricultural knowledge useful and accessible.</p>
+        <div class="actions">
+          <a class="button" href="#experience">Explore my experience</a>
+          <a class="button secondary" href="mailto:arivuselvan.work@gmail.com">Get in touch</a>
+        </div>
+      </div>
+      <div class="portrait-frame">
+        <img src="portrait.jpg" alt="Portrait of Arivuselvan">
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Education</p>
+          <div>
+            <h2>Learning agriculture from science and practice.</h2>
+            <p class="section-intro">Building a strong foundation in crop, soil, and plant sciences while learning directly from farming communities and field settings.</p>
+          </div>
+        </div>
+        <article class="education">
+          <h3>B.Sc. (Hons.) Agriculture</h3>
+          <p class="meta">Dhanalakshmi Srinivasan Agriculture College · Perambalur, Tamil Nadu · Expected 2027</p>
+          <p>Relevant coursework includes bioinoculants and quality standards, plant breeding, soil science, agronomy, crop protection, and agricultural cooperative finance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Experience</p>
+          <div>
+            <h2>Field work, farmer interaction, and AI evaluation.</h2>
+            <p class="section-intro">Practical experience across agricultural extension, horticulture, livestock outreach, and digital agriculture in Tamil Nadu.</p>
+          </div>
+        </div>
+        <div class="experience-list">
+          <article class="experience-card">
+            <h3>Pilot Participant &amp; Evaluator, UpyaChat</h3>
+            <p class="meta">DSAC Perambalur · 2026</p>
+            <ul>
+              <li>Tested an AI agricultural assistant and submitted a formal evaluation of technical performance, species identification, agronomic quality, and farmer usability.</li>
+              <li>Shared structured feedback on UI/UX, scalability, multilingual support, response speed, and free-plan limits.</li>
+              <li>Checked AI answers against agronomic practice.</li>
+            </ul>
+          </article>
+          <article class="experience-card">
+            <h3>Rural Agricultural Work Experience (RAWE) — ADA Attachment</h3>
+            <p class="meta">Yercaud Block, Salem District, Tamil Nadu · 2026</p>
+            <ul>
+              <li>Learned about the Digital Crop Survey, crop and farmer data collection, village-level information, and survey procedures.</li>
+              <li>Interacted with farmers and gathered field-level information on crops and local farming conditions.</li>
+              <li>Observed extension activities, agricultural schemes, and block-level cropping patterns.</li>
+            </ul>
+          </article>
+          <article class="experience-card">
+            <h3>Horticulture Department Field Attachment</h3>
+            <p class="meta">Yercaud, Tamil Nadu · 2026</p>
+            <p>Learned about management and maintenance of public horticultural gardens, including the Botanical Garden and Lake Garden, under the Horticulture Officer.</p>
+          </article>
+          <article class="experience-card">
+            <h3>Animal Husbandry Outreach — Livestock Health &amp; Infertility Camp</h3>
+            <p class="meta">S. Puthur, Yercaud Block · 2026</p>
+            <p>Supported farmer communication at a livestock health and infertility camp, helping explain check-ups and medicine distribution under veterinary staff guidance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Projects</p>
+          <div>
+            <h2>Ideas for sharing knowledge and supporting farmers.</h2>
+            <p class="section-intro">Independent concepts and academic work connecting agricultural knowledge with practical needs.</p>
+          </div>
+        </div>
+        <div class="project-grid">
+          <article class="project">
+            <span class="number">PROJECT 01</span>
+            <h3>AgKnow</h3>
+            <p>An agriculture knowledge-sharing platform concept connecting farmers, students, researchers, and professionals through learning resources and discussion groups.</p>
+            <p>Explores expert content, agricultural communities, job and internship information, and access in low-connectivity settings.</p>
+            <span class="status">Independent concept</span>
+          </article>
+          <article class="project">
+            <span class="number">PROJECT 02</span>
+            <h3>AI-Based Farmer Assistant</h3>
+            <p>Concept development for a conversational agricultural assistant offering farmers accessible, locally relevant crop and farm-management guidance.</p>
+            <span class="status">Concept development</span>
+          </article>
+          <article class="project">
+            <span class="number">ACADEMIC WORK</span>
+            <h3>Coursework &amp; Field Assignments</h3>
+            <p>Academic work on bioinoculant production technology and FCO quality standards, alongside fieldwork with a Primary Agricultural Co-operative Bank.</p>
+            <span class="status">Agriculture coursework</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">04 / Skills</p>
+          <div>
+            <h2>Areas I’m building on.</h2>
+            <p class="section-intro">A mix of agricultural foundations, field experience, digital agriculture, and clear communication.</p>
+          </div>
+        </div>
+        <div class="skills-layout">
+          <div class="skill-group">
+            <h3>Agriculture &amp; field</h3>
+            <div class="tags">
+              <span class="tag">Agronomy</span><span class="tag">Crop management</span><span class="tag">Soil health</span><span class="tag">Plant breeding</span><span class="tag">Bioinoculants</span><span class="tag">Agroecology</span><span class="tag">Field data collection</span><span class="tag">Agricultural extension</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Digital agriculture &amp; AI</h3>
+            <div class="tags">
+              <span class="tag">LLMs</span><span class="tag">Prompt engineering</span><span class="tag">AI assistant evaluation</span><span class="tag">Agronomic quality checks</span><span class="tag">Farmer usability</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Research &amp; communication</h3>
+            <div class="tags">
+              <span class="tag">Research synthesis</span><span class="tag">Technical documentation</span><span class="tag">Report writing</span><span class="tag">Content writing</span><span class="tag">Scripts &amp; screenplays</span><span class="tag">Poetry</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools &amp; languages</h3>
+            <div class="tags">
+              <span class="tag">Word</span><span class="tag">PowerPoint</span><span class="tag">Excel</span><span class="tag">Google Docs</span><span class="tag">Canva</span><span class="tag">Claude</span><span class="tag">Qwen AI</span><span class="tag">Grok AI</span><span class="tag">ChatGPT</span><span class="tag">Tamil</span><span class="tag">English</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div>
+          <p class="eyebrow" style="color:#d3e2b4">05 / Contact</p>
+          <h2>Let’s talk agriculture.</h2>
+          <p>Based in Chennai, Tamil Nadu, India.</p>
+        </div>
+        <div class="actions">
+          <a class="button" href="mailto:arivuselvan.work@gmail.com">arivuselvan.work@gmail.com</a>
+          <a class="button secondary" style="border-color:#d3e2b4;color:white" href="tel:+918939438664">+91 8939438664</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap">© 2026 Arivuselvan · Agriculture · Agroecology · Digital Agriculture</footer>
+</body>
+</html>
